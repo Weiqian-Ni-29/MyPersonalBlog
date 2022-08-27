@@ -1,8 +1,5 @@
 
 <%- include("partials/header"); -%>
-    <h1>Home</h1>
-    <p> <%= startingContent %> </p>
-
 
   <%  posts.forEach(function(post){ %>
     <a href="/posts/<%=post._id%>">
@@ -10,7 +7,10 @@
     </a>
     
     <p>
-      <%=post.content.substring(0, 1000) + " ..."%>
+      <%=post.content.substring(0, 1000)%>
+      <% if(post.content.length > 1000){ %>
+        ...  
+      <% } %> 
     </p>
 
 
