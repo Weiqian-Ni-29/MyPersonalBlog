@@ -12,7 +12,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb+srv://admin-pete:test-123@cluster0.rmzh4kn.mongodb.net/?retryWrites=true&w=majority");
+mongoose.connect("mongodb+srv://admin-pete:<password>@cluster0.rmzh4kn.mongodb.net/?retryWrites=true&w=majority");
 
 const postSchema = {
   title:String,
